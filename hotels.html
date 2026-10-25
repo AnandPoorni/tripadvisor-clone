@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Hotels | Tripadvisor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="travel-page hotels-page">
+
+<header class="navbar">
+    <a href="index.html" class="logo"><i class="ri-eye-line"></i><span>Tripadvisor</span></a>
+    <nav class="nav-links">
+        <a href="discover.html">Discover</a>
+        <a href="review.html">Review</a>
+    </nav>
+    <div class="nav-right">
+        <a href="inr.html" class="currency">| INR</a>
+        <a href="sigin.html" class="sign-in">Sign in</a>
+    </div>
+</header>
+
+<main>
+    <section class="travel-hero hotel-hero">
+        <div class="travel-hero-content">
+            <span class="travel-eyebrow">YOUR NEXT STAY STARTS HERE</span>
+            <h1>Find a place to <span>feel at home.</span></h1>
+            <p>Discover relaxing resorts, beautiful hotels and stays for every kind of traveller.</p>
+
+            <form class="travel-search" id="hotelSearch">
+                <label><i class="ri-map-pin-line"></i>
+                    <span>Destination</span>
+                    <input id="hotelDestination" placeholder="Where are you going?" required>
+                </label>
+                <label><i class="ri-calendar-line"></i>
+                    <span>Check-in</span>
+                    <input type="date" id="hotelCheckin" required>
+                </label>
+                <label><i class="ri-calendar-check-line"></i>
+                    <span>Check-out</span>
+                    <input type="date" id="hotelCheckout" required>
+                </label>
+                <label><i class="ri-user-line"></i>
+                    <span>Guests</span>
+                    <select id="hotelGuests">
+                        <option>1 guest</option>
+                        <option selected>2 guests</option>
+                        <option>3 guests</option>
+                        <option>4 guests</option>
+                        <option>5+ guests</option>
+                    </select>
+                </label>
+                <button type="submit"><i class="ri-search-line"></i> Search</button>
+            </form>
+            <p class="travel-search-message" id="hotelMessage" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <section class="travel-section">
+        <div class="travel-heading">
+            <div>
+                <span class="travel-kicker">STAYS WORTH DISCOVERING</span>
+                <h2>Popular places to stay</h2>
+                <p>Explore different styles of stays for your next trip.</p>
+            </div>
+            <span class="travel-count" id="hotelCount">6 stays</span>
+        </div>
+
+        <div class="travel-filters" id="hotelFilters">
+            <button class="travel-filter active" data-filter="all">All stays</button>
+            <button class="travel-filter" data-filter="resort">Resorts</button>
+            <button class="travel-filter" data-filter="luxury">Luxury</button>
+            <button class="travel-filter" data-filter="budget">Budget stays</button>
+            <button class="travel-filter" data-filter="nature">Nature stays</button>
+        </div>
+
+        <div class="travel-grid" id="hotelGrid">
+            <article class="travel-card" data-category="luxury">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=85" alt="Luxury hotel swimming pool" loading="lazy">
+                    <span class="travel-tag">LUXURY STAY</span>
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">LUXURY HOTEL</span>
+                    <h3>The Grand Escape</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Bengaluru</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.8 · Sample rating</div>
+                    <p class="travel-description">Elegant rooms, relaxing spaces and premium comforts.</p>
+                    <div class="travel-card-bottom"><span>From <strong>₹6,500</strong> / night</span><span>Luxury</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card" data-category="resort nature">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=85" alt="Tropical resort with swimming pool" loading="lazy">
+                    <span class="travel-tag">RELAX & UNWIND</span>
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">RESORT</span>
+                    <h3>Green Valley Resort</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Coorg</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.7 · Sample rating</div>
+                    <p class="travel-description">A peaceful getaway surrounded by greenery.</p>
+                    <div class="travel-card-bottom"><span>From <strong>₹4,200</strong> / night</span><span>Resort</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card" data-category="budget">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=900&q=85" alt="Comfortable modern hotel room" loading="lazy">
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">BUDGET HOTEL</span>
+                    <h3>Comfort Corner</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Chennai</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.3 · Sample rating</div>
+                    <p class="travel-description">A simple, comfortable option for city breaks.</p>
+                    <div class="travel-card-bottom"><span>From <strong>₹1,800</strong> / night</span><span>Budget</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card" data-category="nature resort">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=900&q=85" alt="Peaceful mountain lodge" loading="lazy">
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">NATURE STAY</span>
+                    <h3>Misty Hills Retreat</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Ooty</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.6 · Sample rating</div>
+                    <p class="travel-description">Cool weather, scenic views and quiet surroundings.</p>
+                    <div class="travel-card-bottom"><span>From <strong>₹3,400</strong> / night</span><span>Nature</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card" data-category="luxury resort">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=85" alt="Elegant resort guest room" loading="lazy">
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">BOUTIQUE STAY</span>
+                    <h3>Serene Stay Collection</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Mysuru</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.5 · Sample rating</div>
+                    <p class="travel-description">Thoughtful design and welcoming hospitality.</p>
+                    <div class="travel-card-bottom"><span>From <strong>₹3,900</strong> / night</span><span>Boutique</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card" data-category="budget nature">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=900&q=85" alt="Cosy cabin surrounded by nature" loading="lazy">
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">CABIN GETAWAY</span>
+                    <h3>Little Forest Cabin</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Yercaud</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.6 · Sample rating</div>
+                    <p class="travel-description">A cosy base for nature lovers and weekend trips.</p>
+                    <div class="travel-card-bottom"><span>From <strong>₹2,500</strong> / night</span><span>Nature</span></div>
+                </div>
+            </article>
+        </div>
+        <p class="travel-empty" id="hotelEmpty" hidden>No stays match this filter.</p>
+    </section>
+
+    <section class="travel-banner">
+        <span>PLAN A BETTER GETAWAY</span>
+        <h2>Your perfect stay is waiting.</h2>
+        <p>Compare your options and choose a stay that suits your trip.</p>
+        <a href="index.html">Back to Tripadvisor <i class="ri-arrow-right-line"></i></a>
+    </section>
+</main>
+
+<footer class="travel-footer">
+    <a href="index.html" class="logo"><i class="ri-eye-line"></i><span>Tripadvisor</span></a>
+    <p>Explore more. Travel better.</p>
+</footer>
+
+<script>
+const hotelCards = [...document.querySelectorAll("#hotelGrid .travel-card")];
+const hotelFilters = document.querySelectorAll("#hotelFilters .travel-filter");
+const hotelCount = document.getElementById("hotelCount");
+const hotelEmpty = document.getElementById("hotelEmpty");
+let hotelCategory = "all";
+
+function filterHotels() {
+    let count = 0;
+    hotelCards.forEach(card => {
+        const matches = hotelCategory === "all" ||
+            card.dataset.category.split(" ").includes(hotelCategory);
+        card.hidden = !matches;
+        if (matches) count++;
+    });
+    hotelCount.textContent = `${count} ${count === 1 ? "stay" : "stays"}`;
+    hotelEmpty.hidden = count > 0;
+}
+
+hotelFilters.forEach(button => button.addEventListener("click", () => {
+    hotelCategory = button.dataset.filter;
+    hotelFilters.forEach(item => item.classList.toggle("active", item === button));
+    filterHotels();
+}));
+
+document.getElementById("hotelSearch").addEventListener("submit", event => {
+    event.preventDefault();
+    const destination = document.getElementById("hotelDestination").value.trim();
+    const checkin = document.getElementById("hotelCheckin").value;
+    const checkout = document.getElementById("hotelCheckout").value;
+    const guests = document.getElementById("hotelGuests").value;
+    const message = document.getElementById("hotelMessage");
+
+    if (checkout <= checkin) {
+        message.textContent = "Please select a check-out date after your check-in date.";
+        return;
+    }
+
+    message.textContent = `Your search: ${destination} · ${checkin} to ${checkout} · ${guests}. The hotel cards below are demonstration listings.`;
+    document.getElementById("hotelGrid").scrollIntoView({ behavior: "smooth" });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign In | Tripadvisor</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+
+    <link rel="stylesheet" href="./sigin.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <i class="ri-eye-line"></i>
+            <span>Tripadvisor</span>
+        </a>
+
+        <a href="index.html" class="close-btn" aria-label="Close sign in">
+            <i class="ri-close-line"></i>
+        </a>
+    </header>
+
+    <main class="signin-container">
+
+        <section class="signin-card">
+
+            <div class="signin-heading">
+                <span class="welcome-icon">
+                    <i class="ri-user-smile-line"></i>
+                </span>
+
+                <h1>Welcome back</h1>
+
+                <p>Sign in to plan your next adventure.</p>
+            </div>
+
+            <form action="#" method="get">
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div class="form-options">
+                    <label class="remember">
+                        <input type="checkbox" name="remember">
+                        Remember me
+                    </label>
+
+                    <a href="#forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="signin-btn">
+                    Sign in
+                </button>
+
+            </form>
+
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+
+            <div class="social-login">
+
+                <a href="#google" class="social-btn">
+                    <i class="ri-google-fill"></i>
+                    Google
+                </a>
+
+                <a href="#facebook" class="social-btn">
+                    <i class="ri-facebook-fill"></i>
+                    Facebook
+                </a>
+
+            </div>
+
+            <p class="signup-text">
+                New to Tripadvisor?
+                <a href="signup.html">Join now</a>
+            </p>
+
+            <p class="terms">
+                By signing in, you agree to our
+                <a href="#terms">Terms of Use</a> and
+                <a href="#privacy">Privacy Policy</a>.
+            </p>
+
+        </section>
+
+        <aside class="travel-image">
+
+            <div class="image-content">
+                <span>YOUR NEXT ADVENTURE</span>
+
+                <h2>Explore more.<br>Experience more.</h2>
+
+                <p>
+                    Find inspiring destinations and make
+                    every journey memorable.
+                </p>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Tripadvisor Clone. For learning purposes.</p>
+        <a href="index.html">Back to home</a>
+    </footer>
+
+</body>
+</html>

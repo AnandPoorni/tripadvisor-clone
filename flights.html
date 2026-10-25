@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Flights | Tripadvisor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="travel-page flights-page">
+
+<header class="navbar">
+    <a href="index.html" class="logo"><i class="ri-eye-line"></i><span>Tripadvisor</span></a>
+    <nav class="nav-links">
+        <a href="discover.html">Discover</a>
+        <a href="review.html">Review</a>
+    </nav>
+    <div class="nav-right">
+        <a href="inr.html" class="currency">| INR</a>
+        <a href="sigin.html" class="sign-in">Sign in</a>
+    </div>
+</header>
+
+<main>
+    <section class="travel-hero flight-hero">
+        <div class="travel-hero-content">
+            <span class="travel-eyebrow">THE WORLD IS CLOSER THAN YOU THINK</span>
+            <h1>Your next adventure is <span>taking off.</span></h1>
+            <p>Plan your journey, explore sample flight options and get ready to discover somewhere new.</p>
+        </div>
+
+        <div class="flight-search-panel">
+            <div class="flight-trip-options">
+                <label><input type="radio" name="tripType" value="round" checked> Round trip</label>
+                <label><input type="radio" name="tripType" value="oneway"> One way</label>
+            </div>
+
+            <form id="flightSearch">
+                <div class="flight-fields">
+                    <label class="flight-field">
+                        <span><i class="ri-flight-takeoff-line"></i> FROM</span>
+                        <input id="flightFrom" placeholder="Departure city" value="Bengaluru" required>
+                    </label>
+
+                    <button type="button" class="flight-swap" id="swapCities" aria-label="Swap departure and arrival">
+                        <i class="ri-arrow-left-right-line"></i>
+                    </button>
+
+                    <label class="flight-field">
+                        <span><i class="ri-flight-land-line"></i> TO</span>
+                        <input id="flightTo" placeholder="Arrival city" required>
+                    </label>
+
+                    <label class="flight-field">
+                        <span><i class="ri-calendar-line"></i> DEPARTURE</span>
+                        <input type="date" id="flightDeparture" required>
+                    </label>
+
+                    <label class="flight-field" id="returnField">
+                        <span><i class="ri-calendar-check-line"></i> RETURN</span>
+                        <input type="date" id="flightReturn">
+                    </label>
+
+                    <label class="flight-field">
+                        <span><i class="ri-user-line"></i> PASSENGERS</span>
+                        <select id="flightPassengers">
+                            <option value="1">1 passenger</option>
+                            <option value="2" selected>2 passengers</option>
+                            <option value="3">3 passengers</option>
+                            <option value="4">4 passengers</option>
+                            <option value="5">5 passengers</option>
+                            <option value="6">6 passengers</option>
+                        </select>
+                    </label>
+                </div>
+
+                <button type="submit" class="flight-search-button">
+                    <i class="ri-search-line"></i> Search flights
+                </button>
+                <p class="travel-search-message" id="flightMessage" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <section class="travel-section">
+        <div class="travel-heading">
+            <div>
+                <span class="travel-kicker">GET INSPIRED</span>
+                <h2>Popular flight destinations</h2>
+                <p>Explore destinations for your next holiday.</p>
+            </div>
+        </div>
+
+        <div class="travel-grid destination-flight-grid">
+            <article class="travel-card">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=85" alt="New York city skyline" loading="lazy">
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">CITY BREAK</span>
+                    <h3>New York, USA</h3>
+                    <p class="travel-description">A vibrant city filled with landmarks, culture and entertainment.</p>
+                    <div class="travel-card-bottom"><span><i class="ri-plane-line"></i> International</span><span>Explore</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85" alt="Dubai skyline" loading="lazy">
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">CITY & LUXURY</span>
+                    <h3>Dubai, UAE</h3>
+                    <p class="travel-description">Modern architecture, desert experiences and lively markets.</p>
+                    <div class="travel-card-bottom"><span><i class="ri-plane-line"></i> International</span><span>Explore</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85" alt="Beautiful mountain landscape" loading="lazy">
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">NATURE ESCAPE</span>
+                    <h3>Scenic Getaways</h3>
+                    <p class="travel-description">Find mountain views, peaceful landscapes and outdoor escapes.</p>
+                    <div class="travel-card-bottom"><span><i class="ri-landscape-line"></i> Nature</span><span>Explore</span></div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="travel-section flight-results-section" id="flightResultsSection">
+        <div class="travel-heading">
+            <div>
+                <span class="travel-kicker">FLIGHT EXAMPLES</span>
+                <h2>Sample flight options</h2>
+                <p>Illustrative results for your frontend project—not live fares.</p>
+            </div>
+        </div>
+
+        <div class="flight-results" id="flightResults">
+            <article class="flight-result-card">
+                <div class="flight-airline-icon"><i class="ri-flight-takeoff-line"></i></div>
+                <div class="flight-airline"><strong>Sky Journey</strong><span>Sample airline</span></div>
+                <div class="flight-time"><strong>08:30</strong><span>BLR</span></div>
+                <div class="flight-duration"><span>2h 45m</span><div></div><span>Non-stop · Example</span></div>
+                <div class="flight-time"><strong>11:15</strong><span>DEL</span></div>
+                <div class="flight-price"><strong>₹5,200</strong><span>example fare / person</span></div>
+            </article>
+
+            <article class="flight-result-card">
+                <div class="flight-airline-icon"><i class="ri-flight-takeoff-line"></i></div>
+                <div class="flight-airline"><strong>Cloud Express</strong><span>Sample airline</span></div>
+                <div class="flight-time"><strong>12:10</strong><span>BLR</span></div>
+                <div class="flight-duration"><span>2h 50m</span><div></div><span>Non-stop · Example</span></div>
+                <div class="flight-time"><strong>15:00</strong><span>DEL</span></div>
+                <div class="flight-price"><strong>₹6,100</strong><span>example fare / person</span></div>
+            </article>
+
+            <article class="flight-result-card">
+                <div class="flight-airline-icon"><i class="ri-flight-takeoff-line"></i></div>
+                <div class="flight-airline"><strong>Horizon Air</strong><span>Sample airline</span></div>
+                <div class="flight-time"><strong>17:40</strong><span>BLR</span></div>
+                <div class="flight-duration"><span>3h 00m</span><div></div><span>Non-stop · Example</span></div>
+                <div class="flight-time"><strong>20:40</strong><span>DEL</span></div>
+                <div class="flight-price"><strong>₹4,850</strong><span>example fare / person</span></div>
+            </article>
+        </div>
+    </section>
+
+    <section class="travel-banner">
+        <span>READY FOR TAKEOFF?</span>
+        <h2>Let the journey begin.</h2>
+        <p>Choose your destination and start planning your next adventure.</p>
+        <a href="index.html">Back to Tripadvisor <i class="ri-arrow-right-line"></i></a>
+    </section>
+</main>
+
+<footer class="travel-footer">
+    <a href="index.html" class="logo"><i class="ri-eye-line"></i><span>Tripadvisor</span></a>
+    <p>Explore more. Travel better.</p>
+</footer>
+
+<script>
+const tripTypeInputs = document.querySelectorAll('input[name="tripType"]');
+const returnField = document.getElementById("returnField");
+const returnInput = document.getElementById("flightReturn");
+const departureInput = document.getElementById("flightDeparture");
+const flightMessage = document.getElementById("flightMessage");
+
+function updateTripType() {
+    const roundTrip = document.querySelector('input[name="tripType"]:checked').value === "round";
+    returnField.hidden = !roundTrip;
+    returnInput.required = roundTrip;
+}
+
+tripTypeInputs.forEach(input => input.addEventListener("change", updateTripType));
+
+document.getElementById("swapCities").addEventListener("click", () => {
+    const from = document.getElementById("flightFrom");
+    const to = document.getElementById("flightTo");
+    [from.value, to.value] = [to.value, from.value];
+});
+
+document.getElementById("flightSearch").addEventListener("submit", event => {
+    event.preventDefault();
+
+    const from = document.getElementById("flightFrom").value.trim();
+    const to = document.getElementById("flightTo").value.trim();
+    const departure = departureInput.value;
+    const returnDate = returnInput.value;
+    const roundTrip = document.querySelector('input[name="tripType"]:checked').value === "round";
+    const passengers = document.getElementById("flightPassengers").value;
+
+    if (from.toLowerCase() === to.toLowerCase()) {
+        flightMessage.textContent = "Please choose two different cities.";
+        return;
+    }
+
+    if (departure < new Date().toLocaleDateString("en-CA")) {
+        flightMessage.textContent = "Please select today or a future departure date.";
+        return;
+    }
+
+    if (roundTrip && returnDate < departure) {
+        flightMessage.textContent = "Your return date must be on or after your departure date.";
+        return;
+    }
+
+    flightMessage.textContent =
+        `Search details: ${from} to ${to} · Departure ${departure}` +
+        (roundTrip ? ` · Return ${returnDate}` : " · One way") +
+        ` · ${passengers} passenger(s). The results shown are illustrative examples, not live flights.`;
+
+    document.getElementById("flightResultsSection").scrollIntoView({ behavior: "smooth" });
+});
+
+updateTripType();
+</script>
+</body>
+</html>

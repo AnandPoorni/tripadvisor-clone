@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tripadvisor Clone | Explore the World</title>
+
+    <!-- Remix Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#" class="logo">
+            <i class="ri-eye-line"></i>
+            <span>Tripadvisor</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="discover.html">Discover</a>
+            <a href="review.html">Review</a>
+        </nav>
+
+        <div class="nav-right">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="ri-instagram-line"></i>
+                </a>
+
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="ri-twitter-x-line"></i>
+                </a>
+            </div>
+            <a href="./inr.html" class="currency">| INR</a>
+            <a href="./sigin.html" class="sign-in">Sign in</a>
+        </div>
+    </header>
+    <main>
+
+        <!-- HERO / SEARCH SECTION -->
+        <section class="hero" id="discover">
+
+            <h1 class="hero-title">
+                Where to?
+            </h1>
+
+            <div class="category-tabs">
+                <a href="#destinations" class="active">
+                    <i class="ri-home-4-line"></i>
+                    Search All
+                </a>
+
+                <a href="hotels.html">
+                    <i class="ri-hotel-line"></i>
+                    Hotels
+                </a>
+
+                <a href="things-to-do.html">
+                    <i class="ri-ticket-line"></i>
+                    Things to Do
+                </a>
+
+                <a href="restaurants.html">
+                    <i class="ri-restaurant-line"></i>
+                    Restaurants
+                </a>
+
+                <a href="flights.html">
+                    <i class="ri-flight-takeoff-line"></i>
+                    Flights
+                </a>
+            </div>
+
+            <form class="search-box" action="#destinations">
+                <i class="ri-search-line search-icon"></i>
+
+                <input type="search" name="destination" placeholder="Places to go, things to do, hotels..."
+                    aria-label="Search destinations">
+
+                <button type="submit">Search</button>
+            </form>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=85"
+                    alt="Beautiful mountain lake surrounded by green mountains">
+
+                <div class="hero-overlay">
+                    <span class="eyebrow">YOUR NEXT ADVENTURE</span>
+                    <h2>Find your<br>happy place.</h2>
+                    <p>Discover amazing destinations and unforgettable experiences.</p>
+                    <a href="#destinations" class="primary-btn">
+                        Explore destinations
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- DESTINATIONS -->
+        <section class="section" id="destinations">
+            <div class="section-heading">
+                <div>
+                    <h2>Explore the world's best destinations</h2>
+                    <p>Places that travellers love right now.</p>
+                </div>
+
+                <a href="#trips" class="view-all">View all <i class="ri-arrow-right-line"></i></a>
+            </div>
+
+            <div class="destination-grid">
+
+                <article class="destination-card">
+                    <a href="#trips" class="card-image">
+                        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=700&q=80"
+                            alt="Tropical beach in Goa" loading="lazy">
+                        <span class="image-label">BEACH ESCAPES</span>
+                    </a>
+                    <div class="card-info">
+                        <h3>Goa, India</h3>
+                        <p>Beaches, sunsets and coastal adventures.</p>
+                        <span class="rating"><span>★★★★★</span> 4.8</span>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <a href="#trips" class="card-image">
+                        <img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=700&q=80"
+                            alt="Traditional architecture in Jaipur" loading="lazy">
+                        <span class="image-label">CULTURE</span>
+                    </a>
+                    <div class="card-info">
+                        <h3>Jaipur, India</h3>
+                        <p>Explore palaces, history and local culture.</p>
+                        <span class="rating"><span>★★★★★</span> 4.7</span>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <a href="#trips" class="card-image">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80"
+                            alt="Mountain peaks and scenic landscape" loading="lazy">
+                        <span class="image-label">NATURE</span>
+                    </a>
+                    <div class="card-info">
+                        <h3>Manali, India</h3>
+                        <p>Mountain views, fresh air and adventure.</p>
+                        <span class="rating"><span>★★★★★</span> 4.9</span>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <a href="#trips" class="card-image">
+                        <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=700&q=80"
+                            alt="Tropical Southeast Asian destination" loading="lazy">
+                        <span class="image-label">GO ABROAD</span>
+                    </a>
+                    <div class="card-info">
+                        <h3>Bali, Indonesia</h3>
+                        <p>Tropical scenery, temples and relaxation.</p>
+                        <span class="rating"><span>★★★★★</span> 4.8</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- THINGS TO DO -->
+        <section class="section soft-section" id="things-to-do">
+            <div class="section-heading">
+                <div>
+                    <h2>Make your trip unforgettable</h2>
+                    <p>Find experiences worth travelling for.</p>
+                </div>
+            </div>
+
+            <div class="experience-grid">
+
+                <article class="experience-card">
+                    <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=800&q=80"
+                        alt="Traveller enjoying a scenic trip" loading="lazy">
+                    <div class="experience-content">
+                        <span>01 / EXPLORE</span>
+                        <h3>Outdoor adventures</h3>
+                        <p>Discover trails, mountains and beautiful nature.</p>
+                        <a href="#trips">Explore more <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </article>
+
+                <article class="experience-card">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80"
+                        alt="Restaurant with inviting dining tables" loading="lazy">
+                    <div class="experience-content">
+                        <span>02 / TASTE</span>
+                        <h3>Food and dining</h3>
+                        <p>Discover local flavours and memorable meals.</p>
+                        <a href="#restaurants">Find restaurants <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </article>
+
+                <article class="experience-card">
+                    <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=80"
+                        alt="Beautiful swimming pool at a resort" loading="lazy">
+                    <div class="experience-content">
+                        <span>03 / RELAX</span>
+                        <h3>Hotels and stays</h3>
+                        <p>Find a comfortable place for your next getaway.</p>
+                        <a href="#hotels">Discover stays <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- PROMOTIONAL BANNER -->
+        <section class="promo-section" id="inspiration">
+            <div class="promo-image">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1100&q=85"
+                    alt="Peaceful lake surrounded by mountains" loading="lazy">
+            </div>
+
+            <div class="promo-content">
+                <span class="eyebrow">TRAVEL MORE. WORRY LESS.</span>
+                <h2>Your next great story starts here.</h2>
+                <p>
+                    From peaceful escapes to exciting adventures,
+                    find inspiration for your next journey.
+                </p>
+                <a href="#destinations" class="primary-btn">
+                    Get inspired
+                    <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- RESTAURANTS -->
+        <section class="section" id="restaurants">
+            <div class="section-heading">
+                <div>
+                    <h2>Discover great places to eat</h2>
+                    <p>Explore inviting places for your next meal.</p>
+                </div>
+
+                <a href="#restaurants" class="view-all">Explore all <i class="ri-arrow-right-line"></i></a>
+            </div>
+
+            <div class="restaurant-grid">
+
+                <article class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80"
+                        alt="Warm and welcoming restaurant interior" loading="lazy">
+                    <div class="restaurant-info">
+                        <h3>Local favourites</h3>
+                        <p>Discover places loved by food enthusiasts.</p>
+                        <span class="rating"><span>★★★★★</span> 4.7</span>
+                    </div>
+                </article>
+
+                <article class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80"
+                        alt="Fine dining table with beautifully presented food" loading="lazy">
+                    <div class="restaurant-info">
+                        <h3>Special occasions</h3>
+                        <p>Find a wonderful spot for a special evening.</p>
+                        <span class="rating"><span>★★★★★</span> 4.8</span>
+                    </div>
+                </article>
+
+                <article class="restaurant-card">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80"
+                        alt="Freshly prepared coffee in a cafe" loading="lazy">
+                    <div class="restaurant-info">
+                        <h3>Cafes and coffee</h3>
+                        <p>Relax with coffee and a cosy atmosphere.</p>
+                        <span class="rating"><span>★★★★★</span> 4.6</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- TRAVEL INSPIRATION -->
+        <section class="inspiration-banner" id="trips">
+            <div>
+                <span class="eyebrow">PLAN YOUR NEXT TRIP</span>
+                <h2>Collect moments,<br>not just miles.</h2>
+                <p>Explore new places and create memories that last.</p>
+                <a href="#destinations" class="dark-btn">Start exploring</a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer" id="hotels">
+        <div class="footer-top">
+
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i class="ri-eye-line"></i>
+                    <span>Tripadvisor</span>
+                </a>
+                <p>Your inspiration for discovering the world.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>About</h3>
+                <a href="#discover">About us</a>
+                <a href="#inspiration">Our stories</a>
+                <a href="#trips">Travel inspiration</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <a href="#destinations">Destinations</a>
+                <a href="#things-to-do">Things to do</a>
+                <a href="#restaurants">Restaurants</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Follow us</h3>
+                <a href="#"><i class="ri-facebook-fill"></i> Facebook</a>
+                <a href="#"><i class="ri-instagram-line"></i> Instagram</a>
+                <a href="#"><i class="ri-twitter-x-fill"></i> Twitter</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Tripadvisor Clone. Created for learning purposes.</p>
+            <a href="#discover">Back to top ↑</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

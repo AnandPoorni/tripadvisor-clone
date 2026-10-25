@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do | Tripadvisor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="travel-page things-page">
+
+<header class="navbar">
+    <a href="index.html" class="logo"><i class="ri-eye-line"></i><span>Tripadvisor</span></a>
+    <nav class="nav-links">
+        <a href="discover.html">Discover</a>
+        <a href="review.html">Review</a>
+    </nav>
+    <div class="nav-right">
+        <a href="inr.html" class="currency">| INR</a>
+        <a href="sigin.html" class="sign-in">Sign in</a>
+    </div>
+</header>
+
+<main>
+    <section class="travel-hero activity-hero">
+        <div class="travel-hero-content">
+            <span class="travel-eyebrow">MAKE EVERY MOMENT COUNT</span>
+            <h1>Find experiences <span>you'll remember.</span></h1>
+            <p>Explore iconic landmarks, outdoor adventures and local experiences worth travelling for.</p>
+
+            <form class="travel-search activity-search" id="activitySearch">
+                <label>
+                    <i class="ri-search-line"></i>
+                    <span>What would you like to do?</span>
+                    <input id="activityQuery" placeholder="Try nature, temples, adventure..." required>
+                </label>
+                <button type="submit"><i class="ri-search-line"></i> Explore</button>
+            </form>
+            <p class="travel-search-message" id="activityMessage" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <section class="travel-section">
+        <div class="travel-heading">
+            <div>
+                <span class="travel-kicker">FIND YOUR KIND OF ADVENTURE</span>
+                <h2>Things to do and places to explore</h2>
+                <p>Choose an experience and start planning your next outing.</p>
+            </div>
+            <span class="travel-count" id="activityCount">6 experiences</span>
+        </div>
+
+        <div class="travel-filters" id="activityFilters">
+            <button class="travel-filter active" data-filter="all">All activities</button>
+            <button class="travel-filter" data-filter="nature">Nature</button>
+            <button class="travel-filter" data-filter="culture">Culture</button>
+            <button class="travel-filter" data-filter="adventure">Adventure</button>
+            <button class="travel-filter" data-filter="sightseeing">Sightseeing</button>
+        </div>
+
+        <div class="travel-grid" id="activityGrid">
+            <article class="travel-card" data-category="sightseeing culture" data-search="taj mahal monument agra sightseeing history">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=900&q=85" alt="Taj Mahal in Agra" loading="lazy">
+                    <span class="travel-tag">ICONIC LANDMARK</span>
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">SIGHTSEEING</span>
+                    <h3>Discover the Taj Mahal</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Agra, India</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.9 · Sample rating</div>
+                    <p class="travel-description">Explore one of India's most celebrated historic landmarks.</p>
+                    <div class="travel-card-bottom"><span><i class="ri-time-line"></i> Half-day idea</span><span>History</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card" data-category="nature adventure" data-search="mountain hiking trekking nature outdoors">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Mountain peaks and scenic nature" loading="lazy">
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">OUTDOOR ADVENTURE</span>
+                    <h3>Mountain Hiking Trails</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Explore hill destinations</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.8 · Sample rating</div>
+                    <p class="travel-description">Enjoy fresh air, scenic views and outdoor exploration.</p>
+                    <div class="travel-card-bottom"><span><i class="ri-walk-line"></i> Outdoor activity</span><span>Nature</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card" data-category="culture sightseeing" data-search="palace architecture culture heritage rajasthan">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=900&q=85" alt="Colourful historic architecture" loading="lazy">
+                    <span class="travel-tag">CULTURAL EXPERIENCE</span>
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">CULTURE & HERITAGE</span>
+                    <h3>Explore Historic Architecture</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Rajasthan, India</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.7 · Sample rating</div>
+                    <p class="travel-description">Discover colourful buildings, local history and traditions.</p>
+                    <div class="travel-card-bottom"><span><i class="ri-camera-line"></i> Photo opportunities</span><span>Culture</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card" data-category="nature" data-search="waterfall forest green nature picnic">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=900&q=85" alt="Beautiful waterfall in a green forest" loading="lazy">
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">NATURE ESCAPE</span>
+                    <h3>Waterfalls & Forests</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Nature destinations</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.6 · Sample rating</div>
+                    <p class="travel-description">Spend time among trees, waterfalls and natural scenery.</p>
+                    <div class="travel-card-bottom"><span><i class="ri-leaf-line"></i> Nature outing</span><span>Relaxation</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card" data-category="adventure" data-search="kayaking water adventure lake boating">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Scenic outdoor travel adventure" loading="lazy">
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">ADVENTURE</span>
+                    <h3>Outdoor Adventure Day</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Choose a nearby destination</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.5 · Sample rating</div>
+                    <p class="travel-description">Look for guided outdoor activities and new experiences.</p>
+                    <div class="travel-card-bottom"><span><i class="ri-compass-3-line"></i> Activity idea</span><span>Adventure</span></div>
+                </div>
+            </article>
+
+            <article class="travel-card" data-category="nature sightseeing" data-search="beach coastline sunset sea photography">
+                <div class="travel-card-image">
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=85" alt="Beautiful tropical beach" loading="lazy">
+                    <span class="travel-tag">SCENIC GETAWAY</span>
+                </div>
+                <div class="travel-card-body">
+                    <span class="travel-type">SCENIC ESCAPE</span>
+                    <h3>Beach & Coastal Walks</h3>
+                    <p class="travel-location"><i class="ri-map-pin-line"></i> Coastal destinations</p>
+                    <div class="travel-rating"><span>● ● ● ● ●</span> 4.7 · Sample rating</div>
+                    <p class="travel-description">Enjoy sea views, sunset walks and a relaxing day out.</p>
+                    <div class="travel-card-bottom"><span><i class="ri-sun-line"></i> Outdoor experience</span><span>Coast</span></div>
+                </div>
+            </article>
+        </div>
+        <p class="travel-empty" id="activityEmpty" hidden>No matching experiences found. Try another search.</p>
+    </section>
+
+    <section class="travel-banner">
+        <span>YOUR NEXT EXPERIENCE</span>
+        <h2>Collect moments, not just destinations.</h2>
+        <p>Discover somewhere new and make your next trip special.</p>
+        <a href="index.html">Back to Tripadvisor <i class="ri-arrow-right-line"></i></a>
+    </section>
+</main>
+
+<footer class="travel-footer">
+    <a href="index.html" class="logo"><i class="ri-eye-line"></i><span>Tripadvisor</span></a>
+    <p>Explore more. Travel better.</p>
+</footer>
+
+<script>
+const activityCards = [...document.querySelectorAll("#activityGrid .travel-card")];
+const activityButtons = document.querySelectorAll("#activityFilters .travel-filter");
+const activityInput = document.getElementById("activityQuery");
+const activityCount = document.getElementById("activityCount");
+const activityEmpty = document.getElementById("activityEmpty");
+let activityCategory = "all";
+
+function filterActivities() {
+    const query = activityInput.value.trim().toLowerCase();
+    let count = 0;
+
+    activityCards.forEach(card => {
+        const categories = card.dataset.category.split(" ");
+        const searchableText = (
+            card.dataset.search + " " + card.textContent
+        ).toLowerCase();
+
+        const matchesCategory =
+            activityCategory === "all" || categories.includes(activityCategory);
+        const matchesQuery = searchableText.includes(query);
+        const show = matchesCategory && matchesQuery;
+
+        card.hidden = !show;
+        if (show) count++;
+    });
+
+    activityCount.textContent =
+        `${count} ${count === 1 ? "experience" : "experiences"}`;
+    activityEmpty.hidden = count > 0;
+}
+
+activityInput.addEventListener("input", filterActivities);
+
+document.getElementById("activitySearch").addEventListener("submit", event => {
+    event.preventDefault();
+    filterActivities();
+    document.getElementById("activityGrid").scrollIntoView({ behavior: "smooth" });
+});
+
+activityButtons.forEach(button => button.addEventListener("click", () => {
+    activityCategory = button.dataset.filter;
+    activityButtons.forEach(item => item.classList.toggle("active", item === button));
+    filterActivities();
+}));
+</script>
+</body>
+</html>

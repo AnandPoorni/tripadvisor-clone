@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Restaurants | Tripadvisor</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body class="restaurants-page">
+
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <i class="ri-eye-line"></i>
+        <span>Tripadvisor</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="discover.html">Discover</a>
+        <a href="review.html">Review</a>
+    </nav>
+
+    <div class="nav-right">
+        <a href="inr.html" class="currency">| INR</a>
+        <a href="sigin.html" class="sign-in">Sign in</a>
+    </div>
+</header>
+
+<main>
+    <!-- Hero section -->
+    <section class="restaurant-hero">
+        <div class="restaurant-hero-content">
+            <span class="restaurant-eyebrow">GOOD FOOD. GREAT MEMORIES.</span>
+            <h1>Find your next <span>favourite</span> restaurant.</h1>
+            <p>
+                From local favourites to unforgettable dining experiences,
+                discover places worth sitting down for.
+            </p>
+
+            <form class="restaurant-search" id="restaurantSearch">
+                <i class="ri-search-line"></i>
+                <input
+                    type="search"
+                    id="restaurantQuery"
+                    placeholder="Restaurant, cuisine or destination"
+                    aria-label="Search restaurants"
+                >
+                <button type="submit">Search</button>
+            </form>
+
+            <div class="restaurant-quick-links">
+                <a href="#popular">Popular restaurants</a>
+                <a href="#cuisines">Explore cuisines</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuisine categories -->
+    <section class="restaurant-section" id="cuisines">
+        <div class="restaurant-heading">
+            <div>
+                <span class="restaurant-kicker">EXPLORE BY TASTE</span>
+                <h2>What are you craving?</h2>
+                <p>Choose a cuisine to discover matching restaurants.</p>
+            </div>
+        </div>
+
+        <div class="cuisine-grid">
+            <button class="cuisine-chip active" data-cuisine="all">
+                <i class="ri-restaurant-2-line"></i> All cuisines
+            </button>
+            <button class="cuisine-chip" data-cuisine="south indian">
+                <i class="ri-cup-line"></i> South Indian
+            </button>
+            <button class="cuisine-chip" data-cuisine="north indian">
+                <i class="ri-fire-line"></i> North Indian
+            </button>
+            <button class="cuisine-chip" data-cuisine="italian">
+                <i class="ri-pizza-line"></i> Italian
+            </button>
+            <button class="cuisine-chip" data-cuisine="asian">
+                <i class="ri-bowl-line"></i> Asian
+            </button>
+            <button class="cuisine-chip" data-cuisine="cafe">
+                <i class="ri-cup-line"></i> Cafés
+            </button>
+        </div>
+    </section>
+
+    <!-- Restaurant cards -->
+    <section class="restaurant-section restaurant-list-section" id="popular">
+        <div class="restaurant-heading">
+            <div>
+                <span class="restaurant-kicker">HANDPICKED FOR YOU</span>
+                <h2>Restaurants to explore</h2>
+                <p>Discover different flavours and dining styles.</p>
+            </div>
+            <span class="restaurant-result-count" id="resultCount">6 places</span>
+        </div>
+
+        <div class="restaurant-grid" id="restaurantGrid">
+
+            <article class="restaurant-card"
+                data-name="south indian breakfast cafe"
+                data-cuisine="south indian cafe"
+                data-price="₹"
+                data-rating="4.8">
+                <div class="restaurant-photo">
+                    <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=900&q=85"
+                         alt="South Indian dosa and breakfast">
+                    <span class="restaurant-tag">LOCAL FAVOURITE</span>
+                </div>
+                <div class="restaurant-card-body">
+                    <span class="restaurant-type">SOUTH INDIAN</span>
+                    <h3>South Indian Breakfast Spot</h3>
+                    <div class="restaurant-rating">
+                        <span class="rating-bubbles">● ● ● ● ●</span>
+                        <span>4.8 · Sample rating</span>
+                    </div>
+                    <p>Golden dosas, idlis and traditional favourites.</p>
+                    <div class="restaurant-card-bottom">
+                        <span><i class="ri-wallet-3-line"></i> ₹ · Budget-friendly</span>
+                        <span><i class="ri-map-pin-line"></i> Bengaluru</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="restaurant-card"
+                data-name="north indian curry restaurant"
+                data-cuisine="north indian"
+                data-price="₹₹"
+                data-rating="4.6">
+                <div class="restaurant-photo">
+                    <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=85"
+                         alt="North Indian curry and dishes">
+                    <span class="restaurant-tag">POPULAR CUISINE</span>
+                </div>
+                <div class="restaurant-card-body">
+                    <span class="restaurant-type">NORTH INDIAN</span>
+                    <h3>Indian Curry House</h3>
+                    <div class="restaurant-rating">
+                        <span class="rating-bubbles">● ● ● ● ●</span>
+                        <span>4.6 · Sample rating</span>
+                    </div>
+                    <p>Rich curries, fresh naan and classic Indian dishes.</p>
+                    <div class="restaurant-card-bottom">
+                        <span><i class="ri-wallet-3-line"></i> ₹₹ · Moderate</span>
+                        <span><i class="ri-map-pin-line"></i> Bengaluru</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="restaurant-card"
+                data-name="italian pizza pasta restaurant"
+                data-cuisine="italian"
+                data-price="₹₹"
+                data-rating="4.7">
+                <div class="restaurant-photo">
+                    <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85"
+                         alt="Italian pizza and restaurant food">
+                    <span class="restaurant-tag">COMFORT FOOD</span>
+                </div>
+                <div class="restaurant-card-body">
+                    <span class="restaurant-type">ITALIAN</span>
+                    <h3>Italian Pizza & Pasta</h3>
+                    <div class="restaurant-rating">
+                        <span class="rating-bubbles">● ● ● ● ●</span>
+                        <span>4.7 · Sample rating</span>
+                    </div>
+                    <p>Pizza, pasta and relaxed dining for food lovers.</p>
+                    <div class="restaurant-card-bottom">
+                        <span><i class="ri-wallet-3-line"></i> ₹₹ · Moderate</span>
+                        <span><i class="ri-map-pin-line"></i> Bengaluru</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="restaurant-card"
+                data-name="asian noodles dumplings restaurant"
+                data-cuisine="asian"
+                data-price="₹₹"
+                data-rating="4.5">
+                <div class="restaurant-photo">
+                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=85"
+                         alt="Asian noodle dish">
+                </div>
+                <div class="restaurant-card-body">
+                    <span class="restaurant-type">ASIAN</span>
+                    <h3>Asian Noodle Kitchen</h3>
+                    <div class="restaurant-rating">
+                        <span class="rating-bubbles">● ● ● ● ●</span>
+                        <span>4.5 · Sample rating</span>
+                    </div>
+                    <p>Colourful bowls, noodles and Asian-inspired dishes.</p>
+                    <div class="restaurant-card-bottom">
+                        <span><i class="ri-wallet-3-line"></i> ₹₹ · Moderate</span>
+                        <span><i class="ri-map-pin-line"></i> Bengaluru</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="restaurant-card"
+                data-name="coffee cafe dessert bakery"
+                data-cuisine="cafe"
+                data-price="₹"
+                data-rating="4.6">
+                <div class="restaurant-photo">
+                    <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=85"
+                         alt="Cosy café interior">
+                    <span class="restaurant-tag">RELAX & UNWIND</span>
+                </div>
+                <div class="restaurant-card-body">
+                    <span class="restaurant-type">CAFÉ</span>
+                    <h3>The Cosy Coffee Café</h3>
+                    <div class="restaurant-rating">
+                        <span class="rating-bubbles">● ● ● ● ●</span>
+                        <span>4.6 · Sample rating</span>
+                    </div>
+                    <p>Fresh coffee, sweet treats and a comfortable atmosphere.</p>
+                    <div class="restaurant-card-bottom">
+                        <span><i class="ri-wallet-3-line"></i> ₹ · Budget-friendly</span>
+                        <span><i class="ri-map-pin-line"></i> Bengaluru</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="restaurant-card"
+                data-name="vegetarian healthy food restaurant"
+                data-cuisine="south indian north indian"
+                data-price="₹₹"
+                data-rating="4.7">
+                <div class="restaurant-photo">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85"
+                         alt="Fresh vegetarian meal and salad">
+                </div>
+                <div class="restaurant-card-body">
+                    <span class="restaurant-type">VEGETARIAN</span>
+                    <h3>Fresh & Green Kitchen</h3>
+                    <div class="restaurant-rating">
+                        <span class="rating-bubbles">● ● ● ● ●</span>
+                        <span>4.7 · Sample rating</span>
+                    </div>
+                    <p>Fresh ingredients and a variety of vegetarian meals.</p>
+                    <div class="restaurant-card-bottom">
+                        <span><i class="ri-wallet-3-line"></i> ₹₹ · Moderate</span>
+                        <span><i class="ri-map-pin-line"></i> Bengaluru</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="restaurant-empty" id="noResults" hidden>
+            No matching restaurants found. Try another search or cuisine.
+        </p>
+    </section>
+
+    <!-- Call to action -->
+    <section class="restaurant-cta">
+        <span>YOUR NEXT GREAT MEAL</span>
+        <h2>Good food brings people together.</h2>
+        <p>Explore new tastes and make your next meal memorable.</p>
+        <a href="discover.html">Discover more <i class="ri-arrow-right-line"></i></a>
+    </section>
+</main>
+
+<footer class="restaurant-footer">
+    <a href="index.html" class="logo">
+        <i class="ri-eye-line"></i>
+        <span>Tripadvisor</span>
+    </a>
+    <p>Explore more. Travel better.</p>
+</footer>
+
+<script>
+    const searchForm = document.getElementById("restaurantSearch");
+    const searchInput = document.getElementById("restaurantQuery");
+    const cards = [...document.querySelectorAll(".restaurant-card")];
+    const cuisineButtons = document.querySelectorAll(".cuisine-chip");
+    const resultCount = document.getElementById("resultCount");
+    const noResults = document.getElementById("noResults");
+
+    let selectedCuisine = "all";
+
+    function filterRestaurants() {
+        const query = searchInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const name = card.dataset.name.toLowerCase();
+            const cuisine = card.dataset.cuisine.toLowerCase();
+            const matchesSearch =
+                name.includes(query) || cuisine.includes(query);
+            const matchesCuisine =
+                selectedCuisine === "all" ||
+                cuisine.includes(selectedCuisine);
+
+            const show = matchesSearch && matchesCuisine;
+            card.hidden = !show;
+
+            if (show) visibleCount++;
+        });
+
+        resultCount.textContent =
+            `${visibleCount} ${visibleCount === 1 ? "place" : "places"}`;
+        noResults.hidden = visibleCount !== 0;
+    }
+
+    searchForm.addEventListener("submit", event => {
+        event.preventDefault();
+        filterRestaurants();
+        document.getElementById("popular").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+
+    searchInput.addEventListener("input", filterRestaurants);
+
+    cuisineButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            selectedCuisine = button.dataset.cuisine;
+
+            cuisineButtons.forEach(item => {
+                item.classList.toggle("active", item === button);
+            });
+
+            filterRestaurants();
+        });
+    });
+</script>
+
+</body>
+</html>
